@@ -37,7 +37,7 @@ app.get("/getTweets",(req,res)=>{
 //
 
 
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || PORT,()=>{
   console.log(`Listening on http://localhost:${PORT}`)
 })
 
