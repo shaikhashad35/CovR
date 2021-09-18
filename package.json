@@ -1,0 +1,32 @@
+{
+  "name": "covid-resource",
+  "version": "1.0.0",
+  "description": "To find resouce for covid patient",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pug": "^3.0.2",
+    "twit": "^2.2.11",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaikhashad35/CovR.git"
+  },
+  "author": "Ashad Shaikh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaikhashad35/CovR/issues"
+  },
+  "homepage": "https://github.com/shaikhashad35/CovR#readme",
+  "engines": {
+    "node": "14.17.6"
+  }
+}
