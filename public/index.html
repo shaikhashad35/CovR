@@ -68,7 +68,7 @@
 
 <body>
     <header>
-        <h2> Covid-19 Resources </h2>
+        <h2>CovResource </h2>
 </header>
 <div class="row g-3" style="margin: 30px;">
     <div class="col">
@@ -141,7 +141,7 @@
   
     <script>
         function setData(data) {
-            if(data.count()<=5){
+            if(data.statuses.count()<=5){
                 document.getElementById("foot").style="position:fixed";
             }else{
                 document.getElementById("foot").style="position:";
@@ -166,7 +166,6 @@
         async function getData() {
             let city = document.getElementById("city").value
             let type = document.getElementById("type").value
-            // let url = getNonRetweetedTweetsByKeywordsAndDateURL(city)
             fetch(`https://gentle-headland-89379.herokuapp.com/gettweets?city=${city}&type=${type}`).then(r => r.json()).then((data) => {
                 console.log("Got the Data ", data)
                 setData(data.tweets);
