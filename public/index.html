@@ -97,9 +97,12 @@
 
     </div>
   <div  class="footer" id="foot">
-    <div class="row g 3 mb-6" style="margin: 30px;">
+    <div class="row g 3 mb-6" style="margin-left: 2%;">
+        <h2>CovResource - &nbsp;</h2> <p style="margin-top: 0.7%;">A Helping hand for Covid Resources </p>
+        </div>
+    <div class="row g 3 mb-6" style="margin-left: 2%;">
         <div class="col-md-3 col-sm-4">
-            <h4>Contacts:</h4>
+            <h4>Contacts</h4>
         </div>
         <div class="col-md-3 col-sm-4">
             <dl class="contact-list">
@@ -121,9 +124,9 @@
               </dl>
         </div>
       </div>
-      <div class="row g 3 mb-6" style="margin: 30px;">
+      <div class="row g 3 mb-6" style="margin-left: 2%;">
         <div class="col-md-3 col-sm-4">
-            <h4> Useful Links:</h4>
+            <h4> Useful Links</h4>
         </div>
         <div class="col-md-3 col-sm-4">
             <li><a href="https://www.mohfw.gov.in/">Cases in India</a></li>
@@ -142,9 +145,9 @@
     <script>
         function setData(data) {
             if(data.length<=5){
-                document.getElementById("foot").style="position:fixed";
-            }else{
                 document.getElementById("foot").style="position:";
+            }else{
+                document.getElementById("foot").style="position:fixed";
             }
             const tweetsDiv = document.getElementById("tweets")
             tweetsDiv.innerHTML=''
