@@ -177,7 +177,7 @@
     <script>
         function setData(data) {
             document.getElementById("loaderID").style.display = "block";
-            if(data.length==undefined || data.length<=5){
+            if(data.statuses.length==undefined || data.statuses.length<=5){
                 document.getElementById("foot").style="position:fixed";
             }else{
                 document.getElementById("foot").style="position:relative";
@@ -191,7 +191,7 @@
             thead.innerHTML ='<td style="background-color: #52527a; color:white;"> # </td><td style="background-color: #52527a; color:white;"> Resources </td>'
             table.appendChild(thead);
             let count=1
-            if(data.length==undefined){
+            if(data.statuses.length==undefined){
                 const statusElt = document.createElement("tr")
                 statusElt.innerHTML = `<td colspan=2> No Resources Found</td><td></td>`
                 table.appendChild(statusElt);
