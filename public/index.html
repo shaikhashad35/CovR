@@ -63,6 +63,22 @@
                 margin: 0px;
             }
         }
+        .loader {
+    border: 16px solid #52527a;
+    border-radius: 50%;
+    border-top: 16px solid white;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  }
+  
     </style>
 </head>
 
@@ -92,7 +108,7 @@
          <button type="submit"  id="Submit"  class="btn btn-primary" style="background-color: #52527a;"  onclick="getData()">Search</button>
       </div>
   </div>
- 
+  <div class="loader" id="loaderID" display="none"></div>
     <div id="tweets">
 
     </div>
@@ -148,6 +164,7 @@
   
     <script>
         function setData(data) {
+            document.getElementById("loaderID").style.display = "block";
             if(data.length<=5){
                 document.getElementById("foot").style="position:fixed";
             }else{
@@ -168,6 +185,7 @@
                 count=count+1;
             })
             tweetsDiv.appendChild(table);
+            setTimeout(() => { document.getElementById("loaderID").style.display = "none"},1300);
 
         }
         async function getData() {
