@@ -95,51 +95,56 @@
     <div id="tweets">
 
     </div>
-    <div  class="footer" id="foot">
-            <div class="row g-3" style="margin: 30px;">
-                <div class="col">
-                    <h3>Contacts:</h3>
-                </div>
-                <div class="col">
-                    <dl class="contact-list">
-                        <dt>Helpline Email ID:</dt>
-                        <dd><a href="mailto:#">ncov2019@gov.in</a></dd>
-                      </dl>
-                </div>
-                <div class="col">
-                    <dl class="contact-list">
-                        <dt>Emergency Ambulance Service:</dt>
-                        <dd><a href="tel:#">108</a></dd>
-                      </dl>
-                </div>
-                <div class="col">
-                    <dl class="contact-list">
-                        <dt>Covid Helpline Number:</dt>
-                        <dd><a href="tel:#">+91-11-23978046</a>
-                        </dd>
-                      </dl>
-                </div>
-              </div>
-              <div class="row g-3" style="margin: 30px;">
-                <div class="col">
-                    <h4> Useful Links:</h4>
-                </div>
-                <div class="col">
-                    <li><a href="https://www.mohfw.gov.in/">Cases in India</a></li>
-                </div>
-                <div class="col">
-                    <li><a href="https://gethelpnow.in/?gclid=Cj0KCQjw1dGJBhD4ARIsANb6Odn2KxtAJizNr1jklx6QAP9NQVGAfuCyfUYY6fSC9yXG6oxeNFQkyf0aAt9FEALw_wcB">Ambulance Service</a></li>
-                </div>
-                <div class="col">
-                    <li><a href="https://www.icmr.gov.in/">Covid 19 Details</a></li>
-              </div>
-              
-            </div>
-     
-  </div>
+  <div  class="footer" id="foot">
+    <div class="row g 3 mb-6" style="margin: 30px;">
+        <div class="col-md-3 col-sm-4">
+            <h4>Contacts:</h4>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <dl class="contact-list">
+                <dt>Helpline Email ID:</dt>
+                <dd><a href="mailto:ncov2019@gov.in">ncov2019@gov.in</a></dd>
+              </dl>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <dl class="contact-list">
+                <dt>Emergency Ambulance Service:</dt>
+                <dd><a href="tel:108">108</a></dd>
+              </dl>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <dl class="contact-list">
+                <dt>Covid Helpline Number:</dt>
+                <dd><a href="tel:+91-11-23978046">+91-11-23978046</a>
+                </dd>
+              </dl>
+        </div>
+      </div>
+      <div class="row g 3 mb-6" style="margin: 30px;">
+        <div class="col-md-3 col-sm-4">
+            <h4> Useful Links:</h4>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <li><a href="https://www.mohfw.gov.in/">Cases in India</a></li>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <li><a href="https://gethelpnow.in/?gclid=Cj0KCQjw1dGJBhD4ARIsANb6Odn2KxtAJizNr1jklx6QAP9NQVGAfuCyfUYY6fSC9yXG6oxeNFQkyf0aAt9FEALw_wcB">Ambulance Service</a></li>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <li><a href="https://www.icmr.gov.in/">Covid 19 Details</a></li>
+      </div>
+      
+    </div>
+
+</div>
   
     <script>
         function setData(data) {
+            if(data.count()<=5){
+                document.getElementById("foot").style="position:fixed";
+            }else{
+                document.getElementById("foot").style="position:";
+            }
             const tweetsDiv = document.getElementById("tweets")
             tweetsDiv.innerHTML=''
             const table =document.createElement("table")
